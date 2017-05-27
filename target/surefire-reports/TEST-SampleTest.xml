@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.003" errors="0" skipped="0" tests="2" name="SampleTest">
+<testsuite failures="0" time="0.002" errors="0" skipped="0" tests="2" name="SampleTest">
   <properties>
     <property name="idea.version" value="2017.1"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -60,6 +60,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="0.003" classname="SampleTest" name="myTest"/>
+  <testcase time="0.002" classname="SampleTest" name="myTest"/>
   <testcase time="0" classname="SampleTest" name="myOtherTest"/>
 </testsuite>
