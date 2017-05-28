@@ -9,26 +9,19 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-Hello World
+
 <div id="app"></div>
 
+<script src="/dist/build.js"></script>
 
 <script type = "text/javascript" >
     console.log("hi");
-    var href = window.location.href;
-    href = href.replace("8008", "8080");
 
-    var JSLink = href + "/dist/build.js";
-    var JSElement = document.createElement('script');
-    JSElement.src = JSLink;
-
-
-    document.getElementsByTagName('head')[0].appendChild(JSElement);
     $(document).ready(function () {
-
-    $.get(href + "/Server", function (responseJson) {    // Execute Ajax GET request on URL of "someservlet" and execute the following function with Ajax response JSON...
-        console.log(responseJson);
-    });
+        href = window.location.href.replace("8008", "8080");
+        $.get(href + "Server", function (responseJson) {    // Execute Ajax GET request on URL of "someservlet" and execute the following function with Ajax response JSON...
+            console.log(responseJson);
+        });
     });
 </script>
 </body>
