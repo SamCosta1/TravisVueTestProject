@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="TravisVueTestProject:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/TravisVueTestProject_war</output-path>
+    <root id="archive" name="TravisVueTestProject_war.war">
+      <element id="artifact" artifact-name="TravisVueTestProject:war exploded" />
+    </root>
+  </artifact>
+</component>

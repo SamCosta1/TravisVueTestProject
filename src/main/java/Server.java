@@ -24,7 +24,8 @@ public class Server extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        if ("XMLHttpRequest".equals(request.getHeader("X-Requested-With")))
+        System.out.println(request.getHeader("X-Requested-With"));
+        if ("XMLHttpRequest".equals(request.getHeader("X-Requested-With")) || request.getHeader("X-Requested-With") == null)
             ajax(request, response);
         else
             getPage(request, response);

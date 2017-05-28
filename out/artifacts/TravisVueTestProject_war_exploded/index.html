@@ -1,25 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <title>vuetestproject</title>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
 </head>
 <body>
-Hello world
+Hello World
+<div id="app"></div>
 
-<script>
-$(document).ready(function() {
-	
-	console.log("hi");
-	
-	$.get("Server", function(responseJson) {    // Execute Ajax GET request on URL of "someservlet" and execute the following function with Ajax response JSON...
+
+<script type = "text/javascript" >
+    console.log("hi");
+    var href = window.location.href;
+    href = href.replace("8008", "8080");
+
+    var JSLink = href + "/dist/build.js";
+    var JSElement = document.createElement('script');
+    JSElement.src = JSLink;
+
+
+    document.getElementsByTagName('head')[0].appendChild(JSElement);
+    $(document).ready(function () {
+
+    $.get(href + "/Server", function (responseJson) {    // Execute Ajax GET request on URL of "someservlet" and execute the following function with Ajax response JSON...
         console.log(responseJson);
     });
-});
+    });
 </script>
 </body>
 </html>
