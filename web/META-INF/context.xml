@@ -1,0 +1,11 @@
+<Context>
+    <Resource name="jdbc/MathsChat"
+          auth="Container"
+          type="javax.sql.DataSource"
+          username="javaServer"
+          password="123TRGtr"
+          driverClassName="com.mysql.jdbc.Driver"
+          url="jdbc:mysql://localhost:3306/MathsChat?useSSL=false"
+          maxActive="100"
+          maxIdle="30"/>
+</Context>
