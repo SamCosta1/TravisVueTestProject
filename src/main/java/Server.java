@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 
 /**
  * Servlet implementation class Server
@@ -40,10 +41,21 @@ public class Server extends HttpServlet {
             getPage(request, response);
     }
 
+    @Override
+    protected  void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        HashMap<String, Object> list = new HashMap<String, Object>();
+        System.out.println("POST" + request.getParameter("message"));
+
+        list.put("msg", request.getParameter("message"));
+
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+        response.getWriter().write(new Gson().toJson(list));
+
+    }
+
     private void ajax(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
-    //   System.out.println("AJAX");
-
         int x = 0;
         Connection con = null;
         try {
@@ -71,7 +83,6 @@ public class Server extends HttpServlet {
         response.getWriter().write(new Gson().toJson(list));
 
     }
-
     private void getPage(HttpServletRequest request, HttpServletResponse response) throws IOException	{
        // System.out.println("GET");
         PrintWriter out = response.getWriter();

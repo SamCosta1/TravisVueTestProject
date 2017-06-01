@@ -48,7 +48,7 @@ export default {
 
                 });
                 //this.onclicked();
-                setTimeout(this.onLoad, 2000);
+             //   setTimeout(this.onLoad, 9500);
 
             }
 
